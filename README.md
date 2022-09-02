@@ -1,8 +1,13 @@
 
-I'm a pre-doctoral fellow for Andrei Shleifer in Department of Economics at Harvard University. I'm interested in behavioural economics, international development, and how machine learning can be informative for both. I previously held a research position at the London School of Economics BeWorks. You can find a link to my cv [here](https://github.com/MatthewAlexOBrien/MatthewAlexOBrien.github.io/edit/main/README.md). 
+### Bio
+
+I'm a pre-doctoral fellow for Andrei Shleifer in Department of Economics at Harvard University. I'm interested in Behavioural Economics, International Development, and how machine learning can be informative for both. I previously held a research position at the London School of Economics and BeWorks. You can find a link to my cv [here](https://github.com/MatthewAlexOBrien/MatthewAlexOBrien.github.io/edit/main/README.md). 
+
+### Research
 
 
-### Markdown
+
+### Code
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
