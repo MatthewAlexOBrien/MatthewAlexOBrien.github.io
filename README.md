@@ -3,7 +3,12 @@
 
 I'm a pre-doctoral fellow for Andrei Shleifer in Department of Economics at Harvard University. I'm interested in Behavioural Economics, International Development, and how machine learning can be informative for both. I previously held a research position at the London School of Economics and BeWorks. You can find a link to my cv <a href="cv.pdf">here</a>.
 
-### Research
+### Work in Progress
+
+_Price Norms and Consumer Behaviour_ with Pedro Bordalo, Sandra Sequeira and Mattia Nardotto. Working Paper <a href="cv.pdf">link</a>.
+
+_Inequality, Financial Security and Social Cohesion: Evidence
+from the integration of refugees into host communities_ with Sandra Sequeira, Theresa Beltramo and Florence Nimoh. Working Paper <a href="cv.pdf">link</a>.
 
 
 
