@@ -1,8 +1,6 @@
-## Welcome to GitHub Pages
 
-You can use the [editor on GitHub](https://github.com/MatthewAlexOBrien/MatthewAlexOBrien.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+I'm a pre-doctoral fellow for Andrei Shleifer in Department of Economics at Harvard University. I'm interested in behavioural economics, international development, and how machine learning can be informative for both. I previously held a research position at the London School of Economics BeWorks. You can find a link to my cv [here](https://github.com/MatthewAlexOBrien/MatthewAlexOBrien.github.io/edit/main/README.md). 
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
 ### Markdown
 
