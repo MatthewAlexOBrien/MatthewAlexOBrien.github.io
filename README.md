@@ -39,4 +39,4 @@ For more details see [Basic writing and formatting syntax](https://docs.github.c
 
 ### Contact
 
-e: matthewobrien@fas.harvard.edu
+matthewobrien@fas.harvard.edu
