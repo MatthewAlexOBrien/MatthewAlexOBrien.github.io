@@ -1,10 +1,7 @@
 
 ### Bio
 
-I'm a pre-doctoral fellow for Andrei Shleifer in Department of Economics at Harvard University. I'm interested in Behavioural Economics, International Development, and how machine learning can be informative for both. I previously held a research position at the London School of Economics and BeWorks. You can find a link to my cv [here](https://github.com/MatthewAlexOBrien/MatthewAlexOBrien.github.io/edit/main/README.md). 
-
-
-<a href="cv.pdf">Download File</a>
+I'm a pre-doctoral fellow for Andrei Shleifer in Department of Economics at Harvard University. I'm interested in Behavioural Economics, International Development, and how machine learning can be informative for both. I previously held a research position at the London School of Economics and BeWorks. You can find a link to my cv <a href="cv.pdf">here</a>.
 
 ### Research
 
