@@ -8,7 +8,7 @@ I'm a pre-doctoral fellow for Andrei Shleifer in Department of Economics at Harv
 _Price Norms and Consumer Behaviour_ with Pedro Bordalo, Sandra Sequeira and Mattia Nardotto. Working Paper <a href="cv.pdf">link</a>.
 
 _Inequality, Financial Security and Social Cohesion: Evidence
-From the Integration of Refugees Into Host Communities_ with Sandra Sequeira, Theresa Beltramo and Florence Nimoh. Working Paper <a href="cv.pdf">link</a>.
+From the Integration of Refugees Into Host Communities_ with Sandra Sequeira, Theresa Beltramo and Florence Nimoh. Working Paper <a href="Financial_Security_and_Socioeconomic_Integration.pdf">link</a>.
 
 
 
