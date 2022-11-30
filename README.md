@@ -8,7 +8,7 @@ I'm a pre-doctoral fellow for Andrei Shleifer in Department of Economics at Harv
 _Price Norms and Consumer Behaviour_ with Pedro Bordalo, Sandra Sequeira and Mattia Nardotto. Working Paper.
 
 _Inequality, Financial Security and Social Cohesion: Evidence
-From the Integration of Refugees Into Host Communities_ with Sandra Sequeira, Theresa Beltramo and Florence Nimoh. Working Paper.
+From the Integration of Refugees Into Host Communities_ with Sandra Sequeira, Theresa Beltramo and Florence Nimoh. Working Paper <a href="cv.Financial_Security_and_Socioeconomic_Integration.pdf">pdf</a>.
 
 
 ### Contact
@@ -16,3 +16,5 @@ From the Integration of Refugees Into Host Communities_ with Sandra Sequeira, Th
 matthewobrien@fas.harvard.edu
 
 <script src="http://code.jquery.com/jquery-1.4.2.min.js"></script> <script> var x = document.getElementsByClassName("site-footer-credits"); setTimeout(() => { x[0].remove(); }, 10); </script>
+
+Append ?raw=true to any file URL on Github to get the direct link.
