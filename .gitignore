@@ -1,0 +1,10 @@
+.DS_Store
+
+# Project-private — kept locally, not pushed
+CLAUDE.md
+tasks/
+
+# Source files (only the served copies under assets/ are public)
+CV___Matthew_OBrien.pdf
+Matthew_OBrien.jpg
+example_links.rtf
