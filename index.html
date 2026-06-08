@@ -7,54 +7,331 @@
   <meta name="description" content="Matthew OBrien — MRes/PhD student in Economics at the London School of Economics. Development and behavioural economics.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header class="site-header">
-    <a class="site-title" href="index.html">Matthew OBrien</a>
-    <nav class="site-nav" aria-label="Primary">
-      <a href="index.html" aria-current="page">Home</a>
-      <a href="research.html">Research</a>
-      <a href="teaching.html">Teaching</a>
-      <a href="assets/cv.pdf" target="_blank" rel="noopener">CV <span aria-hidden="true">↗</span></a>
-    </nav>
-  </header>
+  <a class="site-logo" href="https://www.lse.ac.uk/economics" target="_blank" rel="noopener" aria-label="LSE Department of Economics">
+    <span class="logo-box">LSE</span>
+    <span class="logo-name">The London School of Economics<br>and Political Science</span>
+  </a>
 
-  <main class="home">
-    <div class="home-grid">
-      <figure class="portrait">
-        <img src="assets/matthew.jpg" alt="Portrait of Matthew OBrien" width="800" height="800">
-      </figure>
-      <div class="bio">
-        <h1>Matthew OBrien</h1>
-        <p class="lede">
-          I'm a third-year MRes/PhD student in Economics at the London School of Economics, working on topics in development and behavioural economics. I study how memory shapes beliefs and decisions in development settings, with ongoing projects in Zambia and Mozambique. Previously, I was a data scientist at <a href="https://beworks.com" target="_blank" rel="noopener">BEWorks</a>.
-        </p>
-        <p class="lede">
-          I am affiliated with STICERD and the Altruistic Capital Lab.
-        </p>
-        <div class="meta-block">
-          <ul class="contact">
-            <li><a href="mailto:m.obrien3@lse.ac.uk">m.obrien3@lse.ac.uk</a></li>
-            <li><a href="https://github.com/MatthewAlexOBrien" target="_blank" rel="noopener">github.com/MatthewAlexOBrien</a></li>
-          </ul>
-          <p class="cv-cta">
-            <a class="button" href="assets/cv.pdf" target="_blank" rel="noopener">Download CV</a>
+  <div class="card" id="top">
+    <nav class="site-nav" aria-label="Primary">
+      <ul>
+        <li><a href="#working-papers">Working Papers</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#works-in-progress">Works in Progress</a></li>
+        <li><a href="#teaching">Teaching</a></li>
+        <li><a href="assets/cv.pdf" target="_blank" rel="noopener">CV</a></li>
+      </ul>
+    </nav>
+
+    <header class="site-header">
+      <div class="header-intro">
+        <figure class="portrait">
+          <img src="assets/matthew.jpg" alt="Portrait of Matthew OBrien" width="800" height="800">
+        </figure>
+        <div class="header-text">
+          <h1>Matthew OBrien</h1>
+          <p class="lede">
+            Welcome! I'm a third-year MRes/PhD student in Economics at the London School of Economics, working on topics in development and behavioural economics. I study how memory shapes beliefs and decisions in development settings, with ongoing projects in Zambia and Mozambique. Previously, I was a data scientist at <a href="https://beworks.com" target="_blank" rel="noopener">BEWorks</a>. I am affiliated with <a href="https://sticerd.lse.ac.uk/" target="_blank" rel="noopener">STICERD</a> and the <a href="https://altruisticcapitallab.com/" target="_blank" rel="noopener">Altruistic Capital Lab</a>.
           </p>
         </div>
       </div>
-    </div>
-  </main>
 
-  <footer class="site-footer">
-    <p>
+      <div class="header-meta">
+        <section aria-labelledby="contact-heading">
+          <h2 id="contact-heading">Contact Information</h2>
+          <ul>
+            <li><span class="label">Email:</span> <a href="mailto:m.obrien3@lse.ac.uk">m.obrien3@lse.ac.uk</a></li>
+            <li><span class="label">GitHub:</span> <a href="https://github.com/MatthewAlexOBrien" target="_blank" rel="noopener">MatthewAlexOBrien</a></li>
+            <li><span class="label">Website:</span> <a href="https://matt-obrien.com" target="_blank" rel="noopener">matt-obrien.com</a></li>
+            <li><span class="label">Phone:</span> +44 7922 611924</li>
+          </ul>
+        </section>
+        <section aria-labelledby="links-heading">
+          <h2 id="links-heading">Links</h2>
+          <ul>
+            <li><a href="assets/cv.pdf" target="_blank" rel="noopener">CV</a></li>
+            <li><a href="https://scholar.google.com/citations?user=Lgd-O9AAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a></li>
+            <li><a href="https://www.lse.ac.uk/people/matthew-obrien" target="_blank" rel="noopener">LSE webpage</a></li>
+          </ul>
+        </section>
+      </div>
+    </header>
+
+    <section id="working-papers" class="page-section" aria-labelledby="working-papers-heading">
+      <h2 id="working-papers-heading" class="section-heading">Working Papers</h2>
+      <ul class="paper-list">
+
+        <li class="paper" data-paper="financial-security">
+          <p class="paper-title"><a href="papers/Financial%20Security,%20Climate%20Shocks%20and%20Social%20Cohesion.pdf" target="_blank" rel="noopener">Financial Security, Climate Shocks, and Social Cohesion</a></p>
+          <p class="paper-meta">
+            with
+            <a href="https://www.theigc.org/people/theresa-beltramo" target="_blank" rel="noopener">Theresa Beltramo</a>,
+            <a href="https://sites.google.com/view/florence-nimoh/home" target="_blank" rel="noopener">Florence Nimoh</a>,
+            and <a href="https://sites.google.com/view/sandramgsequeira/home" target="_blank" rel="noopener">Sandra Sequeira</a>
+          </p>
+          <p class="paper-status"><em>Submitted</em></p>
+          <p class="paper-presented">
+            <span class="label">Presented at:</span>
+            Pacific Conference for Development Economics (PACDEV); Harvard Department of Economics; Harvard Business School; LSE Department of Economics
+          </p>
+          <div class="chip-row">
+            <a class="chip" href="papers/Financial%20Security,%20Climate%20Shocks%20and%20Social%20Cohesion.pdf" target="_blank" rel="noopener">Paper</a>
+            <button class="chip" type="button" aria-expanded="false" aria-controls="financial-security-abstract" data-target="financial-security-abstract">Abstract</button>
+            <button class="chip" type="button" aria-expanded="false" aria-controls="financial-security-figure" data-target="financial-security-figure">Figure</button>
+            <button class="chip" type="button" aria-expanded="false" aria-controls="financial-security-fp" data-target="financial-security-fp">Funders &amp; Partners</button>
+          </div>
+          <div class="paper-slot">
+            <div class="paper-pane" id="financial-security-abstract" hidden>
+              <p class="paper-abstract">
+                <strong><em>Abstract:</em></strong>
+                Trust and willingness to share resources are not fixed social preferences—they respond to economic circumstances through a mechanism that shifts individuals between cooperative and zero-sum orientations. We provide evidence using two sequential shocks to financial security among ultra-poor refugees and host communities in Mozambique. A randomized livelihoods program increased financial security by 1.51 SD, raising social cohesion by 0.55 SD. A subsequent cyclone partially reversed these gains, reducing social cohesion by 0.30 SD. Both shocks generate similar implied elasticities between financial security and social cohesion, suggesting a stable structural relationship between the two. These findings indicate that economic inclusion programs can promote inter-group integration, but their effects remain vulnerable to the increasingly frequent economic shocks induced by climate change.
+              </p>
+            </div>
+            <div class="paper-pane" id="financial-security-figure" hidden>
+              <figure class="paper-figure">
+                <img src="assets/figures/financial-security-fig7.png" alt="Figure 7 from the paper: financial security index over four survey waves, with separate trajectories for treated households damaged versus undamaged by Cyclone Gombe.">
+                <figcaption>
+                  <strong>Fig. 7.</strong> Impact of the Livelihoods Program and Cyclone Gombe on financial security. <em>x-axis:</em> survey wave (Baseline → Endline). <em>y-axis:</em> Financial Security Index (z-scored against the control group). Series compare treated households exposed to cyclone damage with treated households that were not. Δ = 0.83 SD gap at endline.
+                </figcaption>
+              </figure>
+            </div>
+            <div class="paper-pane" id="financial-security-fp" hidden>
+              <p><span class="fp-heading">Funders and Partners:</span> <a href="https://www.unhcr.org" target="_blank" rel="noopener">UNHCR</a></p>
+            </div>
+          </div>
+        </li>
+
+        <li class="paper" data-paper="recall-fluency">
+          <p class="paper-title">Recall Fluency: A Cognitive Source of Belief and Choice Heterogeneity</p>
+          <p class="paper-meta">
+            with
+            <a href="https://sites.google.com/site/pbordalo/" target="_blank" rel="noopener">Pedro Bordalo</a>,
+            <a href="https://mypage.unibocconi.eu/nicolagennaioli/index.php?IdUte=154156&amp;idr=21313&amp;lingua=eng" target="_blank" rel="noopener">Nicola Gennaioli</a>,
+            and <a href="https://shleifer.scholars.harvard.edu/" target="_blank" rel="noopener">Andrei Shleifer</a>
+          </p>
+          <p class="paper-status"><em>Working Paper</em></p>
+          <p class="paper-presented">
+            <span class="label">Presented at:</span>
+            Bayes Business School
+          </p>
+          <div class="chip-row">
+            <button class="chip" type="button" aria-expanded="false" aria-controls="recall-fluency-abstract" data-target="recall-fluency-abstract">Abstract</button>
+            <span class="chip chip-static">Slides</span>
+            <button class="chip" type="button" aria-expanded="false" aria-controls="recall-fluency-figure" data-target="recall-fluency-figure">Figure</button>
+          </div>
+          <div class="paper-slot">
+            <div class="paper-pane" id="recall-fluency-abstract" hidden>
+              <p class="paper-abstract">
+                <strong><em>Abstract:</em></strong>
+                We study how memory shapes belief formation about macroeconomic and personal events. Using data from the Health and Retirement Study, we link individual performance on standard laboratory word recall tasks—a measure we call recall fluency—to expectations about stock returns, housing prices, and life expectancy. We find that recall fluency strongly predicts both the level and volatility of beliefs across domains. We develop a model of selective memory in which higher recall fluency amplifies the influence of domain-specific experiences on beliefs, increases sensitivity to current signals that match past experiences, and strengthens the role of normatively irrelevant experiences such as childhood health and socioeconomic status. Our findings establish memory capacity as a stable individual trait—akin to risk aversion or patience—that generates substantial heterogeneity in beliefs and economic behavior.
+              </p>
+            </div>
+            <div class="paper-pane" id="recall-fluency-figure" hidden>
+              <figure class="paper-figure">
+                <img src="assets/figures/recall-fluency-figC6.png" alt="Figure C.6 from the appendix: bar chart of impact coefficient sizes for the subjective probability that stocks will go up, evaluated at the sample mean, 25th, and 75th percentiles, broken out by experience, recall fluency, IQ, and their combinations.">
+                <figcaption>
+                  <strong>Fig. C.6.</strong> Impact coefficient sizes for the belief that stocks will go up. <em>x-axis:</em> evaluation point (sample mean / 25th / 75th percentile of the non-focal regressors). <em>y-axis:</em> percentage-point change in the belief from a P25→P75 move in the named regressor (right-hand axis re-expresses it as a share of the dependent-variable mean). Bars: experience, recall fluency, IQ, and their pairwise combinations.
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </li>
+
+        <li class="paper" data-paper="cost-identity">
+          <p class="paper-title">The Cost of Identity: Theory and Experimental Evidence from the Energy Sector</p>
+          <p class="paper-meta">
+            with
+            <a href="https://sites.google.com/view/gaiadossi" target="_blank" rel="noopener">Gaia Dossi</a>
+            and <a href="https://martamorando.com/" target="_blank" rel="noopener">Marta Morando</a>
+          </p>
+          <p class="paper-status"><em>Working Paper</em></p>
+          <p class="paper-presented">
+            <span class="label">Presented at:</span>
+            LSE Department of Economics
+          </p>
+          <div class="chip-row">
+            <button class="chip" type="button" aria-expanded="false" aria-controls="cost-identity-abstract" data-target="cost-identity-abstract">Abstract</button>
+            <a class="chip" href="papers/Cost_Identity_Slides.pdf" target="_blank" rel="noopener">Slides</a>
+            <button class="chip" type="button" aria-expanded="false" aria-controls="cost-identity-figure" data-target="cost-identity-figure">Figure</button>
+            <button class="chip" type="button" aria-expanded="false" aria-controls="cost-identity-fp" data-target="cost-identity-fp">Funders &amp; Partners</button>
+          </div>
+          <div class="paper-slot">
+            <div class="paper-pane" id="cost-identity-abstract" hidden>
+              <p class="paper-abstract">
+                <strong><em>Abstract:</em></strong>
+                How do private and social identities affect occupational choice? We study this question in the energy labor market, where oil and gas firms play a fundamental role in the green transition. We design a novel survey experiment and administer it to first-time job seekers. We find that individuals assign positive amenity value to working for a company whose core business aligns with their environmental identity and disamenity value to those that conflict with it. Respondents with green identities are willing to forgo 20% of their salary to work in a renewable energy firm rather than a generic energy company, and require a 15% wage premium to accept a job in an oil and gas firm. This pattern also holds when individuals apply to work in teams focusing on clean energy within these firms. To isolate social-image effects, we randomize whether job choices are private or publicly disclosed. Social image concerns significantly influence occupational choices, especially for jobs perceived as socially stigmatized. We develop a model of occupational choice in which individuals have private preferences over jobs and derive utility from aligning with social norms. In structural simulations, we study how the social environment shapes the allocation of talent, productivity, and the pace of the green transition.
+              </p>
+            </div>
+            <div class="paper-pane" id="cost-identity-figure" hidden>
+              <figure class="paper-figure">
+                <img src="assets/figures/cost-identity-wtp.png" alt="Experiment 1 willingness-to-pay results: estimated WTP as a percentage of baseline wage for firm, team, and flexibility attributes, shown for the full sample, brown-identity, and green-identity respondents with confidence intervals.">
+                <figcaption>
+                  <strong>Fig. 1.</strong> Experiment 1 — willingness to pay for firm, team, and flexibility attributes. <em>x-axis:</em> job attribute (base groups: Energy firm / No-information team / No flexibility). <em>y-axis:</em> WTP as a percentage of the baseline wage. Series: full sample, brown-identity, and green-identity respondents. Green-identity workers demand roughly a 30% wage premium to move from a renewables to an oil firm.
+                </figcaption>
+              </figure>
+            </div>
+            <div class="paper-pane" id="cost-identity-fp" hidden>
+              <p><span class="fp-heading">Funders and Partners:</span> <a href="https://www.lse.ac.uk/global-school-of-sustainability" target="_blank" rel="noopener">LSE Global School of Sustainability (GSoS)</a></p>
+            </div>
+          </div>
+        </li>
+
+        <li class="paper" data-paper="price-norms">
+          <p class="paper-title">Price Norms and Consumer Behaviour</p>
+          <p class="paper-meta">
+            with
+            <a href="https://sites.google.com/site/pbordalo/" target="_blank" rel="noopener">Pedro Bordalo</a>,
+            <a href="https://sites.google.com/site/mattianardotto/Home" target="_blank" rel="noopener">Mattia Nardotto</a>, and
+            <a href="https://sites.google.com/view/sandramgsequeira/home" target="_blank" rel="noopener">Sandra Sequeira</a>
+          </p>
+          <p class="paper-status"><em>Working Paper</em></p>
+          <p class="paper-presented">
+            <span class="label">Presented at:</span>
+            Harvard Department of Economics
+          </p>
+          <div class="chip-row">
+            <button class="chip" type="button" aria-expanded="false" aria-controls="price-norms-abstract" data-target="price-norms-abstract">Abstract</button>
+            <a class="chip" href="papers/Price_Norms_Presentation.pdf" target="_blank" rel="noopener">Slides</a>
+            <button class="chip" type="button" aria-expanded="false" aria-controls="price-norms-figure" data-target="price-norms-figure">Figure</button>
+            <button class="chip" type="button" aria-expanded="false" aria-controls="price-norms-fp" data-target="price-norms-fp">Funders &amp; Partners</button>
+          </div>
+          <div class="paper-slot">
+            <div class="paper-pane" id="price-norms-abstract" hidden>
+              <p class="paper-abstract">
+                <strong><em>Abstract:</em></strong>
+                We study how memory shapes consumer valuation of prices. When consumers evaluate a price, they compare it to a norm retrieved from past experience: a large discount is attractive partly because it contrasts with remembered higher prices, while a modest increase goes unnoticed if close to the norm. We bring this model to data using transaction records from a large UK retailer, exploiting exogenous variation in prices to identify the causal role of past price experience on current demand. We find that consumers' price sensitivity depends strongly on their personal price history, consistent with memory-based reference dependence.
+              </p>
+            </div>
+            <div class="paper-pane" id="price-norms-figure" hidden>
+              <figure class="paper-figure-pair">
+                <img src="assets/figures/price-norms-attention.png" alt="Schematic plot showing valuation as an S-shaped function of the gap between a price and its norm: small deviations from the norm are absorbed, large deviations are over-weighted.">
+                <img src="assets/figures/price-norms-cues.png" alt="Schematic plot showing valuation as a non-monotonic function of the cued reference price: contrast effects raise valuation when the cue is far from the actual price, assimilation effects lower it when close.">
+                <figcaption>
+                  <strong>Fig. 1.</strong> <em>Left — the role of attention.</em> <em>x-axis:</em> price <em>p</em>, with norm <em>p̄</em> marked. <em>y-axis:</em> valuation. Small deviations from the norm are absorbed; large deviations are over-weighted (S-curve).
+                  <br>
+                  <em>Right — cues and the instability of valuation.</em> <em>x-axis:</em> retrieved reference price <em>p<sup>n</sup></em>. <em>y-axis:</em> valuation. The relationship is non-monotonic: cues that retrieve high reference prices raise valuation through contrast (σ&nbsp;&gt;&nbsp;1) but can depress it through assimilation (σ&nbsp;&lt;&nbsp;1).
+                </figcaption>
+              </figure>
+            </div>
+            <div class="paper-pane" id="price-norms-fp" hidden>
+              <p><span class="fp-heading">Funders and Partners:</span> A major UK grocery retailer</p>
+            </div>
+          </div>
+        </li>
+
+      </ul>
+    </section>
+
+    <section id="publications" class="page-section" aria-labelledby="publications-heading">
+      <h2 id="publications-heading" class="section-heading">Publications</h2>
+      <ul class="paper-list">
+
+        <li class="paper" data-paper="ltg">
+          <p class="paper-title"><a href="papers/Belief_Overreaction_and_Aggregate%20Fluctuations.pdf" target="_blank" rel="noopener">Long Term Expectations and Aggregate Fluctuations</a></p>
+          <p class="paper-meta">
+            with
+            <a href="https://sites.google.com/site/pbordalo/" target="_blank" rel="noopener">Pedro Bordalo</a>,
+            <a href="https://mypage.unibocconi.eu/nicolagennaioli/index.php?IdUte=154156&amp;idr=21313&amp;lingua=eng" target="_blank" rel="noopener">Nicola Gennaioli</a>,
+            <a href="https://vivo.brown.edu/display/rlaporta" target="_blank" rel="noopener">Rafael La Porta</a>,
+            and <a href="https://shleifer.scholars.harvard.edu/" target="_blank" rel="noopener">Andrei Shleifer</a>
+          </p>
+          <p class="paper-status"><em>NBER Macroeconomics Annual</em>, 38(1):311–347, 2024</p>
+          <div class="chip-row">
+            <a class="chip" href="papers/Belief_Overreaction_and_Aggregate%20Fluctuations.pdf" target="_blank" rel="noopener">Paper</a>
+            <button class="chip" type="button" aria-expanded="false" aria-controls="ltg-abstract" data-target="ltg-abstract">Abstract</button>
+            <button class="chip" type="button" aria-expanded="false" aria-controls="ltg-figure" data-target="ltg-figure">Figure</button>
+          </div>
+          <div class="paper-slot">
+            <div class="paper-pane" id="ltg-abstract" hidden>
+              <p class="paper-abstract">
+                <strong><em>Abstract:</em></strong>
+                We use analysts' long-term earnings growth (LTG) forecasts for S&amp;P 500 firms to measure aggregate expectations and study their role in macro-financial fluctuations. LTG forecasts are excessively volatile and systematically disappointed: high LTG predicts both predictable forecast errors and low future stock returns, contradicting rationality. Holding required returns constant, an expectations-based price index built from LTG accounts for the bulk of post-1980 stock-market volatility and resolves Shiller's excess volatility puzzle. The same beliefs help explain financial and real co-movement: higher LTG predicts near-term increases and longer-horizon declines in interest rates, the reverse pattern for credit spreads, and investment booms that revert as optimism is disappointed. LTG also forecasts consumption, employment, and wages, with Granger causality running from expectations to the macroeconomy. Together, the evidence indicates that nonrational fluctuations in long-term beliefs are a quantitatively important driver of aggregate financial and real volatility.
+              </p>
+            </div>
+            <div class="paper-pane" id="ltg-figure" hidden>
+              <figure class="paper-figure">
+                <img src="assets/figures/ltg-fig3.png" alt="Figure 3 from the paper: log-scale plot of the S&P 500 index against the rational benchmark and the earnings-forecast-based price index, 1982–2022.">
+                <figcaption>
+                  <strong>Fig. 3.</strong> S&amp;P 500 versus Shiller Index <em>p*</em> and Expectations-Based Index <em>p̃</em>. We plot in log scale the levels of the S&amp;P 500 index (solid line), the rational benchmark index (<em>p*</em>, dotted line, eq. [3]), and the price index based on earnings forecasts (<em>p̂</em>, dashed line, eq. [4]). A color version of this figure is available online.
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </li>
+
+      </ul>
+    </section>
+
+    <section id="works-in-progress" class="page-section" aria-labelledby="works-in-progress-heading">
+      <h2 id="works-in-progress-heading" class="section-heading">Works in Progress</h2>
+      <ul class="paper-list">
+
+        <li class="paper" data-paper="neet-narratives">
+          <p class="paper-title">Changing Narratives: AI-Assisted Reframing for NEET Youth</p>
+          <p class="paper-meta">
+            <span class="meta-label">Project team:</span>
+            <a href="https://ashrafnava.wordpress.com/" target="_blank" rel="noopener">Nava Ashraf</a>,
+            <a href="https://orianabandiera.github.io/" target="_blank" rel="noopener">Oriana Bandiera</a>,
+            Bennet Feld, Jerry Lin, and
+            <a href="https://sites.google.com/view/cszerman/" target="_blank" rel="noopener">Christiane Szerman</a>
+          </p>
+          <p class="paper-status"><em>Pilot ongoing</em></p>
+          <div class="chip-row">
+            <button class="chip" type="button" aria-expanded="false" aria-controls="neet-narratives-abstract" data-target="neet-narratives-abstract">Abstract</button>
+            <button class="chip" type="button" aria-expanded="false" aria-controls="neet-narratives-fp" data-target="neet-narratives-fp">Funders &amp; Partners</button>
+          </div>
+          <div class="paper-slot">
+            <div class="paper-pane" id="neet-narratives-abstract" hidden>
+              <p class="paper-abstract">
+                <strong><em>Abstract:</em></strong>
+                Working with the UK Department for Work and Pensions, we develop and test an AI tool that helps young people who are not in employment, education, or training (NEET) reframe their past experiences and rewrite the narrative around themselves as workers. The tool targets the framing gap that work coaches in Jobcentres frequently encounter — young people who cannot see how their past connects to a contribution they could make at work — alongside the more familiar skills gap.
+              </p>
+            </div>
+            <div class="paper-pane" id="neet-narratives-fp" hidden>
+              <p><span class="fp-heading">Funders and Partners:</span> <a href="https://www.gov.uk/government/organisations/department-for-work-pensions" target="_blank" rel="noopener">UK Department for Work and Pensions</a></p>
+            </div>
+          </div>
+        </li>
+
+      </ul>
+    </section>
+
+    <section id="teaching" class="page-section" aria-labelledby="teaching-heading">
+      <h2 id="teaching-heading" class="section-heading">Teaching</h2>
+      <div class="courses">
+        <h3>London School of Economics</h3>
+        <p class="institution-meta">Department of Economics · 2023–2026</p>
+
+        <article class="course">
+          <p class="course-title"><span class="course-code">ECA3</span> Microeconomics II</p>
+          <p class="course-meta">Department of Economics · Rating 4.9/5</p>
+        </article>
+
+        <article class="course">
+          <p class="course-title"><span class="course-code">EC1A1</span> Microeconomics I</p>
+          <p class="course-meta">Department of Economics · Rating 4.7/5</p>
+        </article>
+
+        <article class="course">
+          <p class="course-title"><span class="course-code">EC200</span> Behavioural Economics</p>
+          <p class="course-meta">Department of Economics · Rating 4.8/5</p>
+        </article>
+      </div>
+    </section>
+
+    <footer class="site-footer">
       <a href="mailto:m.obrien3@lse.ac.uk">m.obrien3@lse.ac.uk</a>
       &nbsp;·&nbsp;
       <a href="https://github.com/MatthewAlexOBrien" target="_blank" rel="noopener">github.com/MatthewAlexOBrien</a>
       &nbsp;·&nbsp;
       <span>&copy; 2026 Matthew OBrien</span>
-    </p>
-  </footer>
+    </footer>
+  </div>
+
+  <script src="js/site.js" defer></script>
 </body>
 </html>

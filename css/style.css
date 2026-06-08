@@ -1,6 +1,8 @@
 /* ============================================================
    Matthew OBrien — academic site
-   Single shared stylesheet. No build step.
+   Single shared stylesheet. No build step. No framework.
+   Layout cloned from ben-faber.com (Tailwind translated to CSS):
+   crimson frame + centered grey card, Inter throughout.
    ============================================================ */
 
 /* ---- 1. Reset ---------------------------------------------- */
@@ -11,440 +13,425 @@ ul { list-style: none; }
 img { display: block; max-width: 100%; height: auto; }
 a { color: inherit; }
 
+html { scroll-padding-top: 24px; }
+
 /* ---- 2. Tokens --------------------------------------------- */
 :root {
-  --ink:    #1a1a1a;
-  --paper:  #fdfdfb;
-  --accent: #1740b0;
-  --muted:  #6b6b6b;
-  --rule:   #e6e3dd;
+  --crimson:    #a4123f;  /* page frame (Ben Faber's Berkeley blue slot) */
+  --card:       #fcfcfb;  /* near-white content card */
+  --ink:        #1f2937;  /* gray-800 body */
+  --ink-strong: #111827;  /* gray-900 name */
+  --ink-soft:   #374151;  /* gray-700 secondary */
+  --rule:       #e5e7eb;  /* gray-200 dividers */
+  --link:       #1d4ed8;  /* blue-700 general links */
+  --navy:       #13284b;  /* paper titles */
+  --coauthor:   #2a6db0;  /* coauthor links (lighter blue) */
+  --chip-border: #d1d5db; /* gray-300 */
+  --chip-hover:  #e3e3e4;
+  --chip-active: #d6d6d8;
+  --pane:        #ededee;  /* expanded dropdown background (grey) */
 
-  --font-body: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
-  --font-head: 'Work Sans', 'Helvetica Neue', Arial, sans-serif;
+  --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
 
-  --s-1:  8px;
-  --s-2: 16px;
-  --s-3: 24px;
-  --s-4: 32px;
-  --s-5: 48px;
-  --s-6: 64px;
-  --s-7: 80px;
-
-  --max-home:     1400px;
-  --max-research: 1280px;
-  --max-prose:     720px;
+  --card-max: 896px;      /* max-w-4xl */
 }
 
-/* ---- 3. Base type ------------------------------------------ */
+/* ---- 3. Base ----------------------------------------------- */
 body {
-  font-family: var(--font-body);
-  font-size: 20px;
-  line-height: 1.6;
+  font-family: var(--font);
+  font-size: 16px;
+  line-height: 1.625;          /* leading-relaxed */
   color: var(--ink);
-  background: var(--paper);
+  background: var(--crimson);
+  min-height: 100vh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4 {
-  font-family: var(--font-head);
-  font-weight: 500;
-  line-height: 1.2;
-  letter-spacing: -0.01em;
-  color: var(--ink);
-}
-
-h1 { font-size: 36px; }
-h2 { font-size: 26px; }
-h3 { font-size: 21px; }
-
-p { margin: 0; }
-p + p { margin-top: var(--s-2); }
-
 a {
-  color: var(--accent);
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 3px;
-  transition: text-decoration-color 0.15s ease, color 0.15s ease;
+  color: var(--link);
+  text-decoration: none;
 }
-a:hover { text-decoration-color: transparent; }
+a:hover { text-decoration: underline; }
 a:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 3px;
-  border-radius: 1px;
-}
-
-em { font-style: italic; }
-
-/* ---- 4. Layout — header / nav / main / footer -------------- */
-.site-header {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: var(--s-2) var(--s-4);
-  padding: var(--s-4) var(--s-5);
-  border-bottom: 1px solid var(--rule);
-}
-
-.site-title {
-  font-family: var(--font-head);
-  font-weight: 600;
-  font-size: 18px;
-  letter-spacing: 0.01em;
-  color: var(--ink);
-  text-decoration: none;
-}
-.site-title:hover { text-decoration: none; color: var(--accent); }
-
-.site-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--s-3);
-}
-
-.site-nav a {
-  font-family: var(--font-head);
-  font-size: 16px;
-  color: var(--ink);
-  text-decoration: none;
-  padding-bottom: 2px;
-}
-.site-nav a:hover { color: var(--accent); }
-.site-nav a[aria-current="page"] {
-  font-weight: 600;
-  border-bottom: 1px solid var(--ink);
-}
-
-main {
-  padding: var(--s-6) var(--s-5);
-}
-
-/* Home & research are LEFT-ALIGNED, not centered */
-main.home     { max-width: var(--max-home);     margin: 0; }
-main.research { max-width: var(--max-research); margin: 0; }
-main.page     { max-width: var(--max-prose);    margin: 0 auto; }
-
-main > h1 {
-  margin-bottom: var(--s-5);
-  padding-bottom: var(--s-3);
-  border-bottom: 1px solid var(--rule);
-}
-main.research > h1 {
-  margin-bottom: var(--s-3);
-  padding-bottom: 0;
-  border-bottom: none;
-}
-
-.site-footer {
-  border-top: 1px solid var(--rule);
-  padding: var(--s-4) var(--s-5);
-  font-family: var(--font-head);
-  font-size: 14px;
-  color: var(--muted);
-}
-/* .site-footer a inherits the global accent-blue underlined link style */
-
-/* ---- 5. Home page ------------------------------------------ */
-main.home > .home-grid {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: var(--s-7);
-  align-items: start;
-}
-
-.portrait { margin: 0; }
-.portrait img {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
+  outline: 2px solid var(--link);
+  outline-offset: 2px;
   border-radius: 2px;
 }
 
-.bio h1 {
-  font-size: 40px;
-  margin-bottom: var(--s-4);
-}
+em { font-style: italic; }
+strong { font-weight: 600; }
 
-.bio .lede {
-  font-size: 21px;
-  line-height: 1.55;
-}
-.bio .lede + .lede { margin-top: var(--s-3); }
-
-.bio .meta-block { margin-top: var(--s-5); }
-
-.contact {
+/* ---- 4. Top wordmark (Ben Faber's logo slot) --------------- */
+.site-logo {
   display: flex;
-  flex-wrap: wrap;
-  gap: var(--s-1) var(--s-3);
-  font-family: var(--font-head);
-  font-size: 15px;
-  margin-bottom: var(--s-4);
-}
-/* .contact a inherits the global accent-blue underlined link style */
-
-.cv-cta { margin-top: var(--s-3); }
-
-.button {
-  display: inline-block;
-  font-family: var(--font-head);
-  font-size: 15px;
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  color: var(--ink);
-  background: transparent;
-  border: 1px solid var(--ink);
-  padding: 10px 22px;
-  text-decoration: none;
-  transition: background 0.15s ease, color 0.15s ease;
-}
-.button:hover {
-  background: var(--ink);
-  color: var(--paper);
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  max-width: var(--card-max);
+  margin: 36px auto 0;
+  padding: 0 16px;
+  color: #fff;
   text-decoration: none;
 }
+.site-logo:hover { text-decoration: none; }
 
-/* ---- 6. Research page -------------------------------------- */
-.research-toc {
-  display: flex;
-  align-items: baseline;
-  flex-wrap: wrap;
-  gap: var(--s-2);
-  font-family: var(--font-head);
-  font-size: 14px;
-  padding-bottom: var(--s-3);
-  border-bottom: 1px solid var(--rule);
-  margin-bottom: var(--s-6);
+.logo-box {
+  flex-shrink: 0;
+  font-weight: 700;
+  font-size: 26px;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  color: var(--crimson);
+  background: #fff;
+  padding: 9px 12px;
+  border-radius: 3px;
 }
-.research-toc .dot { color: var(--muted); }
 
-.papers { scroll-margin-top: var(--s-4); }
-
-.papers > h2 {
-  font-family: var(--font-head);
-  font-size: 20px;
+.logo-name {
+  font-size: 15px;
   font-weight: 500;
-  color: var(--ink);
+  line-height: 1.25;
+  letter-spacing: 0.01em;
+  color: #fff;
+}
+.site-logo:hover .logo-name {
   text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 6px;
-  margin-bottom: var(--s-5);
+  text-underline-offset: 3px;
 }
 
-.papers + .papers {
-  margin-top: var(--s-7);
-  padding-top: var(--s-7);
+/* ---- 5. Content card --------------------------------------- */
+.card {
+  max-width: var(--card-max);
+  margin: 32px auto;            /* my-8 */
+  padding: 32px;                /* lg:p-8 */
+  background: var(--card);
+  border-radius: 8px;           /* rounded-lg */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+              0 4px 6px -4px rgba(0, 0, 0, 0.1);   /* shadow-lg */
+}
+
+/* ---- 6. Nav (centered, blue links) ------------------------- */
+.site-nav {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 48px;          /* mb-12 */
+}
+.site-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 16px;                /* space-x-4 */
+  font-size: 16px;
+  font-weight: 500;
+}
+.site-nav a {
+  color: var(--link);
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+.site-nav a:hover { text-decoration: underline; }
+
+/* ---- 7. Header (photo left, name + intro right) ------------ */
+.site-header {
+  margin-bottom: 32px;          /* mb-8 */
+  padding-bottom: 24px;         /* pb-6 */
+  border-bottom: 1px solid var(--rule);
+}
+
+.header-intro {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;      /* name cap-line level with top of photo */
+  gap: 32px;                    /* sm:mr-8 */
+}
+
+.portrait {
+  flex-shrink: 0;
+  width: 240px;                 /* sm:w-60 */
+  height: 288px;                /* sm:h-72 */
+}
+.portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+              0 2px 4px -2px rgba(0, 0, 0, 0.1);   /* shadow-md */
+}
+
+.header-text h1 {
+  font-size: 36px;              /* sm:text-4xl */
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--ink-strong);
+  margin-bottom: 8px;
+}
+.header-text .lede {
+  font-size: 16px;
+  color: var(--ink-soft);
+  text-align: justify;
+  text-align-last: left;
+}
+.header-text .lede + .lede { margin-top: 16px; }
+
+/* Contact + Links, two columns */
+.header-meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 24px;                    /* gap-6 */
+  margin-top: 8px;
+  padding-top: 40px;            /* pt-10 */
   border-top: 1px solid var(--rule);
 }
-
-.paper {
-  display: grid;
-  grid-template-columns: 7fr 3fr;
-  gap: var(--s-5);
-  align-items: start;
+.header-meta section {
+  flex: 1 1 0;
+  min-width: 240px;
 }
-.paper + .paper { margin-top: var(--s-7); }
+.header-meta h2 {
+  font-size: 20px;              /* text-xl */
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+.header-meta ul {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;                     /* space-y-1 */
+  color: var(--ink-soft);
+  word-break: break-word;
+}
+.header-meta .label { color: var(--ink-soft); }
 
-.paper-text > * + * { margin-top: var(--s-2); }
+/* ---- 8. Sections ------------------------------------------- */
+.page-section {
+  margin-bottom: 32px;          /* mb-8 */
+  padding-bottom: 24px;         /* pb-6 */
+  border-bottom: 1px solid var(--rule);
+  scroll-margin-top: 24px;
+}
+.page-section:last-of-type {
+  border-bottom: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.section-heading {
+  font-size: 20px;              /* text-xl */
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 16px;          /* mb-4 */
+}
 
+.paper-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;                    /* space-y-6 */
+}
+
+/* ---- 9. Paper entry ---------------------------------------- */
 .paper-title {
-  font-family: var(--font-head);
-  font-size: 22px;
-  font-weight: 500;
-  line-height: 1.3;
-  margin-bottom: var(--s-1);
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--link);
 }
+.paper-title a {
+  color: var(--link);
+  text-decoration: none;
+}
+.paper-title a:hover { text-decoration: underline; }
 
 .paper-meta {
-  font-family: var(--font-head);
-  font-size: 14px;
-  color: var(--muted);
-  line-height: 1.5;
+  font-size: 0.925rem;          /* text-[0.925rem] */
+  color: var(--ink);
+  margin-top: 4px;
 }
-.paper-meta em { font-style: italic; color: var(--ink); }
+.paper-meta a {                 /* coauthor links: Ben Faber blue, not bold, no underline */
+  color: var(--link);
+  font-weight: 400;
+  text-decoration: none;
+}
+.paper-meta a:hover { text-decoration: none; }
+.paper-meta em { font-style: italic; }
+.paper-meta .meta-label { font-weight: 600; }
 
-.paper-abstract {
-  font-size: 18px;
-  line-height: 1.55;
+.paper-status {
+  font-size: 0.925rem;
+  color: var(--ink);
+  margin-top: 2px;
 }
+.paper-status em { font-style: italic; }
 
 .paper-presented {
-  font-family: var(--font-head);
-  font-size: 13px;
-  color: var(--muted);
-  line-height: 1.5;
+  font-size: 0.925rem;
+  color: var(--ink);
+  margin-top: 4px;
 }
 .paper-presented .label { font-weight: 600; }
 
-.paper-links {
-  font-family: var(--font-head);
-  font-size: 14px;
+/* ---- 10. Dropdown tiles (mine — Ben Faber has none) -------- */
+.chip-row {
   display: flex;
   flex-wrap: wrap;
-  align-items: baseline;
-  column-gap: var(--s-3);
-  row-gap: var(--s-1);
+  align-items: center;
+  gap: 6px;
+  margin-top: 10px;
 }
-.paper-links a { color: var(--accent); }
-
-/* Funders-and-Partners disclosure ---------------------------- */
-.paper-fp { display: inline-block; }
-
-.paper-fp summary {
+.chip {
+  font-family: var(--font);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--ink);
+  background: #fff;
+  border: 1px solid var(--chip-border);
+  border-radius: 4px;
+  padding: 5px 11px;
+  text-decoration: none;
   cursor: pointer;
-  font-family: var(--font-head);
-  font-weight: 400;
-  font-size: 14px;
-  color: var(--accent);
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 3px;
-  list-style: none;
-  display: inline;
+  line-height: 1.2;
+  transition: border-color 0.15s ease, background 0.15s ease;
 }
-.paper-fp summary::-webkit-details-marker { display: none; }
-.paper-fp summary::marker { content: ""; }
-.paper-fp summary:hover { text-decoration-color: transparent; }
-.paper-fp summary:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 3px;
-  border-radius: 1px;
+.chip:hover {
+  border-color: var(--navy);
+  background: var(--chip-hover);
+  text-decoration: none;
+  color: var(--ink);
 }
+.chip:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 2px;
+}
+.chip[aria-expanded="true"] {
+  border-color: var(--navy);
+  background: var(--chip-active);
+}
+.chip-static { cursor: default; }
+.chip-static:hover { border-color: var(--chip-border); background: #fff; }
 
-.paper-fp[open] { display: block; }
+.paper-pane {
+  margin-top: 12px;
+  padding: 16px;
+  background: var(--pane);
+  border: 1px solid #e2e2e3;
+  border-radius: 4px;
+}
+.paper-pane[hidden] { display: none; }
 
-.paper-fp-body {
-  margin-top: var(--s-1);
-  padding: var(--s-2) var(--s-3);
-  background: #f1efea;
-  border-left: 2px solid var(--rule);
-  font-family: var(--font-head);
-  font-size: 14px;
+.paper-pane .paper-abstract {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  text-align: justify;
+  text-align-last: left;
+}
+.paper-pane p {
+  font-size: 0.9rem;
   line-height: 1.55;
   color: var(--ink);
-  max-width: 520px;
 }
-.paper-fp-body .fp-heading {
-  font-weight: 700;
-  color: var(--ink);
-}
-.paper-fp-body a { color: var(--accent); }
+.paper-pane .fp-heading { font-weight: 600; }
 
-/* Project-team label on Works-in-Progress meta line */
-.paper-meta .meta-label { font-weight: 600; color: var(--ink); }
-
-/* Works-in-Progress entries: no figure, full-width text ------ */
-.paper.paper-wip {
-  grid-template-columns: 1fr;
-  max-width: 820px;
-}
-
-.paper-figure { margin: 0; }
-.paper-figure img {
+.paper-pane .paper-figure { margin: 0; }
+.paper-pane .paper-figure img {
   width: 100%;
   height: auto;
   background: #fff;
   border: 1px solid var(--rule);
 }
-.paper-figure figcaption {
-  font-family: var(--font-head);
-  font-size: 12.5px;
-  color: var(--muted);
+.paper-pane .paper-figure figcaption {
+  font-size: 0.8rem;
+  color: var(--ink-soft);
   line-height: 1.55;
-  margin-top: var(--s-2);
+  margin-top: 10px;
 }
-
-/* Two-figure layout for Price Norms — identical box dimensions */
-.paper-figure-pair {
+.paper-pane .paper-figure-pair {
   margin: 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: var(--s-2);
+  gap: 12px;
 }
-.paper-figure-pair img {
+.paper-pane .paper-figure-pair img {
   width: 100%;
   aspect-ratio: 5 / 4;
   object-fit: contain;
   background: #fff;
   border: 1px solid var(--rule);
 }
-.paper-figure-pair figcaption {
+.paper-pane .paper-figure-pair figcaption {
   grid-column: 1 / -1;
-  font-family: var(--font-head);
-  font-size: 12.5px;
-  color: var(--muted);
+  font-size: 0.8rem;
+  color: var(--ink-soft);
   line-height: 1.55;
-  margin-top: var(--s-2);
+  margin-top: 10px;
 }
 
-/* ---- 7. Teaching page -------------------------------------- */
-.courses > h2 {
-  font-family: var(--font-head);
-  font-size: 22px;
-  font-weight: 500;
-  margin-bottom: var(--s-1);
+/* ---- 11. Teaching ------------------------------------------ */
+.courses h3 {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 4px;
 }
-
 .institution-meta {
-  font-family: var(--font-head);
-  font-size: 14px;
-  color: var(--muted);
-  margin-bottom: var(--s-5);
+  font-size: 0.925rem;
+  color: var(--ink-soft);
+  margin-bottom: 16px;
 }
-
-.course + .course { margin-top: var(--s-4); }
-
+.course + .course { margin-top: 12px; }
 .course-title {
-  font-family: var(--font-head);
-  font-size: 18px;
-  font-weight: 500;
-  margin-bottom: var(--s-1);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 2px;
 }
 .course-code {
-  font-family: var(--font-head);
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.02em;
-  color: var(--ink);
-  margin-right: var(--s-1);
+  margin-right: 6px;
 }
-
 .course-meta {
-  font-family: var(--font-head);
-  font-size: 14px;
-  color: var(--muted);
+  font-size: 0.925rem;
+  color: var(--ink-soft);
 }
 
-/* ---- 8. Mobile --------------------------------------------- */
-@media (max-width: 820px) {
-  .site-header {
-    padding: var(--s-3);
-    gap: var(--s-2);
-  }
-  .site-nav { gap: var(--s-2); }
-  .site-nav a { font-size: 15px; }
+/* ---- 12. Footer -------------------------------------------- */
+.site-footer {
+  margin-top: 32px;
+  padding-top: 20px;
+  border-top: 1px solid var(--rule);
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+}
 
-  main { padding: var(--s-5) var(--s-3); }
-
-  main.home > .home-grid {
-    grid-template-columns: 1fr;
-    gap: var(--s-4);
+/* ---- 13. Mobile -------------------------------------------- */
+@media (max-width: 768px) {
+  .site-logo {
+    margin-top: 28px;
+    gap: 10px;
   }
-  .portrait { max-width: 320px; }
-  .bio h1 { font-size: 32px; }
-  .bio .lede { font-size: 18px; }
+  .logo-box { font-size: 22px; padding: 7px 10px; }
+  .logo-name { font-size: 13px; }
 
-  .paper {
-    grid-template-columns: 1fr;
-    gap: var(--s-3);
+  .card {
+    margin: 20px 14px;
+    padding: 20px;
+    border-radius: 6px;
   }
-  .paper-title { font-size: 20px; }
-  .paper-abstract { font-size: 17px; }
 
-  .site-footer {
-    padding: var(--s-3);
-    font-size: 13px;
+  .site-nav { margin-bottom: 32px; }
+  .site-nav ul { font-size: 15px; }
+
+  .header-intro {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
   }
-  .site-footer p { line-height: 1.8; }
+  .portrait { width: 176px; height: 208px; }   /* w-44 h-52 */
+  .header-text { text-align: left; }
+  .header-text h1 { font-size: 30px; }          /* text-3xl */
+
+  .header-meta { flex-direction: column; gap: 20px; }
+
+  .paper-pane .paper-figure-pair { grid-template-columns: 1fr; }
+  .paper-pane .paper-figure-pair img { aspect-ratio: auto; }
 }
