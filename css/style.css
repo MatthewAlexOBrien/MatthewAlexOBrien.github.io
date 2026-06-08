@@ -131,6 +131,19 @@ strong { font-weight: 600; }
   font-size: 16px;
   font-weight: 500;
 }
+.site-nav li {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.site-nav li + li::before {     /* small blue dot between items */
+  content: "";
+  flex: none;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--link);
+}
 .site-nav a {
   color: var(--link);
   padding: 4px 8px;
