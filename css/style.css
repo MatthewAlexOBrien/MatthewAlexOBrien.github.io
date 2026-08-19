@@ -333,6 +333,8 @@ strong { font-weight: 600; }
 }
 .chip-static { cursor: default; }
 .chip-static:hover { border-color: var(--chip-border); background: #fff; }
+.chip-disabled { cursor: default; color: var(--ink-soft); opacity: 0.55; }
+.chip-disabled:hover { border-color: var(--chip-border); background: #fff; color: var(--ink-soft); }
 
 .paper-pane {
   margin-top: 12px;
