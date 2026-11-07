@@ -288,13 +288,6 @@ strong { font-weight: 600; }
 }
 .paper-status em { font-style: italic; }
 
-.paper-presented {
-  font-size: 0.925rem;
-  color: var(--ink);
-  margin-top: 4px;
-}
-.paper-presented .label { font-weight: 600; }
-
 /* ---- 10. Dropdown tiles (mine — Ben Faber has none) -------- */
 .chip-row {
   display: flex;
