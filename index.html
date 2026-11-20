@@ -145,12 +145,26 @@
           </p>
           <p class="paper-status"><em>Working Paper</em></p>
           <div class="chip-row">
-            <span class="chip chip-disabled" aria-disabled="true" title="Temporarily unavailable">Abstract</span>
-            <span class="chip chip-disabled" aria-disabled="true" title="Temporarily unavailable">Slides</span>
-            <span class="chip chip-disabled" aria-disabled="true" title="Temporarily unavailable">Figure</span>
+            <button class="chip" type="button" aria-expanded="false" aria-controls="cost-identity-abstract" data-target="cost-identity-abstract">Abstract</button>
+            <a class="chip" href="papers/Cost_Identity_Slides.pdf" target="_blank" rel="noopener">Slides</a>
+            <button class="chip" type="button" aria-expanded="false" aria-controls="cost-identity-figure" data-target="cost-identity-figure">Figure</button>
             <button class="chip" type="button" aria-expanded="false" aria-controls="cost-identity-fp" data-target="cost-identity-fp">Funders &amp; Partners</button>
           </div>
           <div class="paper-slot">
+            <div class="paper-pane" id="cost-identity-abstract" hidden>
+              <p class="paper-abstract">
+                <strong><em>Abstract:</em></strong>
+                How do the private and social dimensions of identity affect occupational choice? We study this question in the energy labor market, where firms whose core business is in oil and gas are central to the green transition. In a survey experiment with 1,500 UK first-time job seekers, we randomize the employer’s core business, the team’s focus, and the wage across job postings. We develop a novel measure of green identity that draws from open- and closed-ended answers to capture how central the environment is to respondents’ sense of self. Relative to a generic energy firm, green respondents require a 30% wage premium to join an oil and gas firm and forgo 20% of their salary to join a renewables firm. This also holds when applying to teams focusing on clean energy within these firms. To separate private identity from social image concerns, we randomize whether interest in a firm-sponsored training program is disclosed with the respondent’s name and photo or private. Removing disclosure raises green respondents’ interest in the oil and gas firm from 28% to 41% and leaves the renewables program unchanged, closing about a third of the gap between the two. We embed our estimates within a model of occupational choice in which individuals have private preferences over jobs and derive utility from aligning with social norms. In structural simulations, we study how the social environment shapes the allocation of talent across occupations, aggregate productivity, and the pace of the green transition.
+              </p>
+            </div>
+            <div class="paper-pane" id="cost-identity-figure" hidden>
+              <figure class="paper-figure">
+                <img src="assets/figures/cost-identity-wtp.png" alt="Experiment 1 willingness-to-pay results: estimated WTP as a percentage of baseline wage for firm, team, and flexibility attributes, shown for the full sample, brown-identity, and green-identity respondents with confidence intervals.">
+                <figcaption>
+                  <strong>Fig. 1.</strong> Experiment 1 — willingness to pay for firm, team, and flexibility attributes. <em>x-axis:</em> job attribute (base groups: Energy firm / No-information team / No flexibility). <em>y-axis:</em> WTP as a percentage of the baseline wage. Series: full sample, brown-identity, and green-identity respondents. Green-identity workers demand roughly a 30% wage premium to move from a renewables to an oil firm.
+                </figcaption>
+              </figure>
+            </div>
             <div class="paper-pane" id="cost-identity-fp" hidden>
               <p><span class="fp-heading">Funders and Partners:</span> <a href="https://www.lse.ac.uk/global-school-of-sustainability" target="_blank" rel="noopener">LSE Global School of Sustainability (GSoS)</a></p>
             </div>
